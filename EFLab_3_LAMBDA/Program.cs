@@ -10,17 +10,38 @@ namespace EFLab_3_LAMBDA
     {
         static void Main(string[] args)
         {
+            List<string> nameList = new List<string>();
+            nameList.Add("AJ");
+            nameList.Add("Sandra");
+            nameList.Add("Theodore");
+            nameList.Add("Akwasi");
+            nameList.Add("Thommy");
+            nameList.Add("AkwasiiJunior");
+            nameList.Add("Christina");
+            nameList.Add("Millie");
+            nameList.Add("Akwasi Junior");
+            nameList.Add("Pappa");
+            nameList.Add("Kofi");
+            nameList.Add("A. Junior");
+
+            Console.WriteLine("1 - View all names");
+            Console.WriteLine("2 - View all names that beings with A");
+            string userChoice = Console.ReadLine();
+
+            if (userChoice == "1")
+            {
+                Console.WriteLine($"You Selected 1 \r\n");
+                nameList.ForEach(name => Console.WriteLine(name));
+
+            }
+            else if (userChoice == "2")
+            {
+                Console.WriteLine("You Selected 2");
+                // TODO: här är jag
+                nameList.ForEach(name => Console.WriteLine(name));
+            }
+            System.Threading.Thread.Sleep(9000);
+
         }
     }
 }
-
-/*
-3.4.1		Linq	med	Lambda	(mot	en	enkel	lista)	
-Fortsätt	med	konsol	applikationen	från	2.3
-Gör	om Linq-frågorna	så	att	de	använder	Linq	med	Lambda
-Skapa	alternativ som	användaren	kan välja	och	implementera	logiken för	följande	
-alternativ
-o 3.	Visa	alla	namn	som	innehåller	ett	“A”
-o 4.	Visa	alla	namn	som	börjar	på	“A”	och	inte	innehåller	ett	“S”
-    persons.Where(p => p.FirstName.StartsWith("A"))
-*/

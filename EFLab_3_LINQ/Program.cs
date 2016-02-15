@@ -24,13 +24,9 @@ namespace EFLab_3_LINQ
             nameList.Add("Kofi");
             nameList.Add("A. Junior");
 
-
-
             Console.WriteLine("1 - View all names");
             Console.WriteLine("2 - View all names that beings with A");
             string userChoice = Console.ReadLine();
-
-            
 
             if (userChoice == "1")
             {
