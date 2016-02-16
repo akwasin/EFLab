@@ -37,7 +37,6 @@ namespace EFLab_3_LAMBDA
             else if (userChoice == "2")
             {
                 Console.WriteLine("You Selected 2");
-                // TODO: här är jag
                 nameList.ForEach(name => Console.WriteLine(name));
             }
             System.Threading.Thread.Sleep(9000);

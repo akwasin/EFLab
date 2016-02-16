@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFLab_3_LINQ", "EFLab_3_LIN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFLab_3_LAMBDA", "EFLab_3_LAMBDA\EFLab_3_LAMBDA.csproj", "{97A2ACFD-7C3A-4CCE-A4C6-5E4DA2E9B99E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFLab_3_LINQoLAMBDA", "EFLab_3_LINQoLAMBDA\EFLab_3_LINQoLAMBDA.csproj", "{FFEB59E5-2B8C-4CC5-802C-61F94EFAEAB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{97A2ACFD-7C3A-4CCE-A4C6-5E4DA2E9B99E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97A2ACFD-7C3A-4CCE-A4C6-5E4DA2E9B99E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97A2ACFD-7C3A-4CCE-A4C6-5E4DA2E9B99E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFEB59E5-2B8C-4CC5-802C-61F94EFAEAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFEB59E5-2B8C-4CC5-802C-61F94EFAEAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFEB59E5-2B8C-4CC5-802C-61F94EFAEAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFEB59E5-2B8C-4CC5-802C-61F94EFAEAB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
