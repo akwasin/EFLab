@@ -10,7 +10,7 @@ namespace EFLab_3_LINQoLAMBDA
     {
         static void Main(string[] args)
         {
-#region
+            #region
             List<Employee> employeeList = new List<Employee>();
 
             Employee aj = new Employee()
@@ -147,66 +147,72 @@ namespace EFLab_3_LINQoLAMBDA
             employeeList.Add(david);
             #endregion
 
-
             Console.WriteLine("1 - View all Employees");
             Console.WriteLine("2 - View Employees by lastname");
             Console.WriteLine("3 - View Employees by firstname");
             Console.WriteLine("4 - View Employees by department");
             Console.WriteLine("5 - View Employees by id");
+            Console.WriteLine("6 - Free search");
+            Console.WriteLine("7 - Exit");
 
+            bool looper = true;
 
-            string userChoice = Console.ReadLine();
-
-            if (userChoice == "1")
+            while (looper)
             {
-                employeeList.ForEach(Employee => Console.WriteLine($"{Employee.Id}: {Employee.FirstName} {Employee.LastName}"));
 
-            }
-            else if (userChoice == "2")
-            {
-                employeeList = employeeList.OrderBy(e => e.LastName).ToList();
-                foreach (var employee in employeeList)
+                string userChoice = Console.ReadLine();
+
+                switch (userChoice)
                 {
-                    Console.WriteLine($"{employee.Id}: {employee.LastName} {employee.FirstName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                    case "1":
+                        employeeList.ForEach(Employee => Console.WriteLine($"{Employee.Id}: {Employee.FirstName} {Employee.LastName}"));
+                        break;
+                    case "2":
+                        List<Employee> EmployeeListLastNameSort = employeeList.OrderBy(e => e.LastName).ToList();
+                        foreach (var employee in EmployeeListLastNameSort)
+                        {
+                            Console.WriteLine($"{employee.Id}: {employee.LastName} {employee.FirstName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                        }
+                        break;
+                    case "3":
+                        List<Employee> EmployeeListFirstnameSort = employeeList.OrderBy(e => e.FirstName).ToList();
+                        foreach (var employee in EmployeeListFirstnameSort)
+                        {
+                            Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                        }
+                        break;
+                    case "4":
+                        List<Employee> EmployeeListDepartmentSort = employeeList.OrderBy(e => e.Department).ToList();
+                        foreach (var employee in EmployeeListDepartmentSort)
+                        {
+                            Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                        }
+                        break;
+                    case "5":
+                        List<Employee> EmployeeListIdSort = employeeList.OrderBy(e => e.Id).ToList();
+                        foreach (var employee in EmployeeListIdSort)
+                        {
+                            Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}");
+                        }
+                        break;
+                    case "6":
+                        Console.Write("Enter search string ");
+                        string userSearchString = Console.ReadLine().ToLower();
+
+                        List<Employee> EmployeeListSearch = employeeList.Where(e => e.FirstName.ToLower().Contains(userSearchString) || e.LastName.ToLower().Contains(userSearchString)).ToList();
+
+                        foreach (var employee in EmployeeListSearch)
+                        {
+                            Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                        }
+                        break;
+                    case "7":
+                        looper = false;
+                        Console.WriteLine("Quitting..");
+                        System.Threading.Thread.Sleep(2000);
+                        return;
                 }
             }
-            else if (userChoice == "3")
-            {
-                employeeList = employeeList.OrderBy(e => e.FirstName).ToList();
-                foreach (var employee in employeeList)
-                {
-                    Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
-                }
-            }
-            else if (userChoice == "4")
-            {
-                employeeList = employeeList.OrderBy(e => e.Department).ToList();
-                foreach (var employee in employeeList)
-                {
-                    Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
-                }
-            }
-
-            else if (userChoice == "5")
-            {
-                employeeList = employeeList.OrderBy(e => e.Id).ToList();
-                foreach (var employee in employeeList)
-                {
-                    Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}");
-                }
-            }
-            System.Threading.Thread.Sleep(12000);
-            
-            /*
-            Visa	alla	namn soretrade	efter Efternamn
-            Visa	alla	namn sorterade efter	Förnamn
-            Lista	alla	employees	för	en	viss	avdelning
-            En	fritext	söking:	användaren	matar	in	ett	namn	(eller	bara	några	tecken	I	
-            början	av	namnet)
-            
-            § Sökningen	ska	visa	alla	employees	var	namn	stammer	överens	eller	
-            börjar	med	det	som	användaren	matat	in.
-            */
         }
     }
 }
