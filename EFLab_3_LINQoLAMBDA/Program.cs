@@ -149,10 +149,10 @@ namespace EFLab_3_LINQoLAMBDA
 
 
             Console.WriteLine("1 - View all Employees");
-            Console.WriteLine("2 - View all Employees (Sorted by lastname");
-            Console.WriteLine("3 - View all Employees (Sorted by firstname");
-            Console.WriteLine("4 - View all Employees (Sorted by department");
-            Console.WriteLine("5 - View all Employees (Sorted by id");
+            Console.WriteLine("2 - View Employees by lastname");
+            Console.WriteLine("3 - View Employees by firstname");
+            Console.WriteLine("4 - View Employees by department");
+            Console.WriteLine("5 - View Employees by id");
 
 
             string userChoice = Console.ReadLine();
