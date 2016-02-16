@@ -16,135 +16,135 @@ namespace EFLab_3_LINQoLAMBDA
             Employee aj = new Employee()
             {
                 Age = 29,
-                Department = "Development",
+                Department = "Goalkeeping",
                 FirstName = "AJ",
                 HireDate = DateTime.Today,
-                Id = 1,
+                Id = 18,
                 LastName = "Karikari"
             };
 
-            Employee sandra = new Employee()
+            Employee thierry = new Employee()
             {
                 Age = 26,
-                Department = "Economy",
-                FirstName = "Sandra",
+                Department = "Striking",
+                FirstName = "Thierry",
                 HireDate = DateTime.Today,
-                Id = 1,
-                LastName = "Dotter"
+                Id = 12,
+                LastName = "Henry"
             };
 
             Employee theodore = new Employee()
             {
                 Age = 21,
-                Department = "Marketing",
+                Department = "Midfielding",
                 FirstName = "Theodore",
                 HireDate = DateTime.Today,
-                Id = 1,
-                LastName = "Son"
+                Id = 7,
+                LastName = "Karikari-Persson"
             };
 
-            Employee akwasi = new Employee()
+            Employee martin = new Employee()
             {
-                Age = 29,
-                Department = "Development",
-                FirstName = "Akwasi",
+                Age = 44,
+                Department = "Striking",
+                FirstName = "Martin",
                 HireDate = DateTime.Today,
-                Id = 1,
-                LastName = "Vuxen"
+                Id = 11,
+                LastName = "Dahlin"
             };
 
-            Employee thommy = new Employee()
+            Employee tommy = new Employee()
             {
                 Age = 63,
-                Department = "Sales",
-                FirstName = "Thommy",
+                Department = "Coaching",
+                FirstName = "Tommy",
                 HireDate = DateTime.Today,
-                Id = 1,
-                LastName = "Pensionar"
+                Id = 102,
+                LastName = "Svensson"
             };
 
-            Employee akwasiijunior = new Employee()
+            Employee zlatan = new Employee()
             {
-                Age = 29,
-                Department = "Development",
-                FirstName = "Akwasi Junior",
+                Age = 36,
+                Department = "Striking",
+                FirstName = "Zlatan",
                 HireDate = DateTime.Today,
-                Id = 1,
-                LastName = "Mellanbarn"
+                Id = 10,
+                LastName = "Ibrahimovic"
             };
 
-            Employee christina = new Employee()
+            Employee paolo = new Employee()
             {
-                Age = 53,
-                Department = "Talking",
-                FirstName = "Christina",
+                Age = 42,
+                Department = "Defending",
+                FirstName = "Paolo",
                 HireDate = DateTime.Today,
-                Id = 1,
-                LastName = "Mamma"
+                Id = 3,
+                LastName = "Maldini"
             };
 
-            Employee millie = new Employee()
+            Employee ivan = new Employee()
             {
-                Age = 25,
-                Department = "Sales",
-                FirstName = "Millie",
+                Age = 22,
+                Department = "Refereeing",
+                FirstName = "Ivan",
                 HireDate = DateTime.Today,
-                Id = 1,
-                LastName = "Syster"
+                Id = 122,
+                LastName = "Prgomet"
             };
 
-            Employee akwasijunior = new Employee()
+            Employee tony = new Employee()
             {
-                Age = 29,
-                Department = "Development",
-                FirstName = "Akwasi Junior",
+                Age = 38,
+                Department = "Defending",
+                FirstName = "Tony",
                 HireDate = DateTime.Today,
-                Id = 1,
-                LastName = "Pappa"
+                Id = 2,
+                LastName = "Adams"
             };
 
-            Employee pappa = new Employee()
+            Employee arsene = new Employee()
             {
-                Age = 59,
-                Department = "Economy",
-                FirstName = "Pappa",
+                Age = 61,
+                Department = "Coaching",
+                FirstName = "Arsene",
                 HireDate = DateTime.Today,
-                Id = 1,
-                LastName = "Elder"
+                Id = 108,
+                LastName = "Wenger"
             };
 
-            Employee kofi = new Employee()
+            Employee johan = new Employee()
             {
-                Age = 33,
-                Department = "Design",
-                FirstName = "Kofi",
+                Age = 35,
+                Department = "Johan",
+                FirstName = "Defending",
                 HireDate = DateTime.Today,
-                Id = 1,
-                LastName = "Broder"
+                Id = 5,
+                LastName = "Allbäck"
             };
 
-            Employee Junior = new Employee()
+            Employee david = new Employee()
             {
-                Age = 29,
-                Department = "Design",
-                FirstName = "Junior",
+                Age = 43,
+                Department = "Goalkeeping",
+                FirstName = "David",
                 HireDate = DateTime.Today,
                 Id = 1,
-                LastName = "Lille"
+                LastName = "Seaman"
             };
 
             employeeList.Add(aj);
-            employeeList.Add(sandra);
+            employeeList.Add(thierry);
             employeeList.Add(theodore);
-            employeeList.Add(akwasi);
-            employeeList.Add(thommy);
-            employeeList.Add(akwasiijunior);
-            employeeList.Add(christina);
-            employeeList.Add(millie);
-            employeeList.Add(akwasijunior);
-            employeeList.Add(pappa);
-            employeeList.Add(kofi);
-            employeeList.Add(Junior);
+            employeeList.Add(martin);
+            employeeList.Add(tommy);
+            employeeList.Add(zlatan);
+            employeeList.Add(paolo);
+            employeeList.Add(ivan);
+            employeeList.Add(tony);
+            employeeList.Add(arsene);
+            employeeList.Add(johan);
+            employeeList.Add(david);
             #endregion
 
 
@@ -152,28 +152,50 @@ namespace EFLab_3_LINQoLAMBDA
             Console.WriteLine("2 - View all Employees (Sorted by lastname");
             Console.WriteLine("3 - View all Employees (Sorted by firstname");
             Console.WriteLine("4 - View all Employees (Sorted by department");
+            Console.WriteLine("5 - View all Employees (Sorted by id");
+
 
             string userChoice = Console.ReadLine();
 
             if (userChoice == "1")
             {
-                employeeList.ForEach(Employee => Console.WriteLine(Employee));
+                employeeList.ForEach(Employee => Console.WriteLine($"{Employee.Id}: {Employee.FirstName} {Employee.LastName}"));
 
             }
             else if (userChoice == "2")
             {
-                //employeeList.ForEach(Employee => Console.WriteLine($"{Employee.FirstName} {Employee.LastName} "));
-                //employeeList.ForEach(Employee => Console.WriteLine(Employee.LastName));
-                //foreach (employee Employee in employeeList)
-                //{
-                    
-                //}
-
-                //foreach (var a in alpha.OrderByDescending(x => x.Value))
-                //    A.Add(a.Key + ":" + a.Value);
+                employeeList = employeeList.OrderBy(e => e.LastName).ToList();
+                foreach (var employee in employeeList)
+                {
+                    Console.WriteLine($"{employee.Id}: {employee.LastName} {employee.FirstName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                }
             }
-            System.Threading.Thread.Sleep(9000);
-            
+            else if (userChoice == "3")
+            {
+                employeeList = employeeList.OrderBy(e => e.FirstName).ToList();
+                foreach (var employee in employeeList)
+                {
+                    Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                }
+            }
+            else if (userChoice == "4")
+            {
+                employeeList = employeeList.OrderBy(e => e.Department).ToList();
+                foreach (var employee in employeeList)
+                {
+                    Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                }
+            }
+
+            else if (userChoice == "5")
+            {
+                employeeList = employeeList.OrderBy(e => e.Id).ToList();
+                foreach (var employee in employeeList)
+                {
+                    Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}");
+                }
+            }
+            System.Threading.Thread.Sleep(12000);
             
             /*
             Visa	alla	namn soretrade	efter Efternamn
