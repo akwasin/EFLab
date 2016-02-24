@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{61216683-92F5-4B73-B42E-C44C43CCE298}</ProjectGuid>
+    <ProjectGuid>{FD6FF46B-943B-4DB3-86FC-1A358883DE62}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EFLab_2</RootNamespace>
