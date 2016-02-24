@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EFLab_3_LINQoLAMBDA
+namespace EFLab_4
 {
-    class Program
+    class Application
     {
-        static void Main(string[] args)
+        private static void CaseEtt()
+        {
+
+        }
+
+        public static void EmployeeMethod()
         {
             #region
             List<Employee> employeeList = new List<Employee>();
@@ -18,7 +23,7 @@ namespace EFLab_3_LINQoLAMBDA
                 Age = 29,
                 Department = "Goalkeeping",
                 FirstName = "AJ",
-                HireDate = DateTime.Today.AddYears(-2),
+                HireDate = DateTime.Today,
                 Id = 18,
                 LastName = "Karikari"
             };
@@ -165,15 +170,6 @@ namespace EFLab_3_LINQoLAMBDA
                 switch (userChoice)
                 {
                     case "1":
-
-                        /* employeeList.ForEach(e => Console.WriteLine($"{e.FirstName} \r\n ---------------"));
-
-                        foreach (var e in employeeList)
-                        {
-                            Console.WriteLine(e.FirstName);
-                            Console.WriteLine("-------");
-                        } */
-
                         employeeList.ForEach(Employee => Console.WriteLine($"{Employee.Id}: {Employee.FirstName} {Employee.LastName}\n\r"));
                         break;
                     case "2":
@@ -224,5 +220,6 @@ namespace EFLab_3_LINQoLAMBDA
                 }
             }
         }
+
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EFLab_4_CRUD")]
+[assembly: AssemblyTitle("EFLab_4_Crud")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EFLab_4_CRUD")]
+[assembly: AssemblyProduct("EFLab_4_Crud")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("83cc9ae7-05b8-44c3-928c-a8a1f0ec8b30")]
+[assembly: Guid("d8b269be-43b4-48fe-87a9-537755e64584")]
 
 // Version information for an assembly consists of the following four values:
 //

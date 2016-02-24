@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83CC9AE7-05B8-44C3-928C-A8A1F0EC8B30}</ProjectGuid>
+    <ProjectGuid>{D8B269BE-43B4-48FE-87A9-537755E64584}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EFLab_4_CRUD</RootNamespace>
-    <AssemblyName>EFLab_4_CRUD</AssemblyName>
+    <RootNamespace>EFLab_4_Crud</RootNamespace>
+    <AssemblyName>EFLab_4_Crud</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,8 +44,10 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,55 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Author.cs">
-      <DependentUpon>BooksDatabaseConnection.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BooksDatabaseConnection.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BooksDatabaseConnection.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BooksDatabaseConnection.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BooksDatabaseConnection.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BooksDatabaseConnection.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BooksDatabaseConnection.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Author.cs" />
+    <Compile Include="BooksDB.cs" />
+    <Compile Include="DBHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Title.cs">
-      <DependentUpon>BooksDatabaseConnection.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Title.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="BooksDatabaseConnection.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BooksDatabaseConnection.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="BooksDatabaseConnection.edmx.diagram">
-      <DependentUpon>BooksDatabaseConnection.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="BooksDatabaseConnection.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BooksDatabaseConnection.edmx</DependentUpon>
-      <LastGenOutput>BooksDatabaseConnection.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="BooksDatabaseConnection.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BooksDatabaseConnection.edmx</DependentUpon>
-      <LastGenOutput>BooksDatabaseConnection.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
