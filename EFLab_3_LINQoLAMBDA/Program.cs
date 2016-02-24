@@ -210,6 +210,7 @@ namespace EFLab_3_LINQoLAMBDA
                         looper = false;
                         Console.WriteLine("Quitting..");
                         System.Threading.Thread.Sleep(2000);
+
                         return;
                 }
             }
