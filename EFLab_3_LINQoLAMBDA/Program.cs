@@ -165,34 +165,34 @@ namespace EFLab_3_LINQoLAMBDA
                 switch (userChoice)
                 {
                     case "1":
-                        employeeList.ForEach(Employee => Console.WriteLine($"{Employee.Id}: {Employee.FirstName} {Employee.LastName}"));
+                        employeeList.ForEach(Employee => Console.WriteLine($"{Employee.Id}: {Employee.FirstName} {Employee.LastName}\n\r"));
                         break;
                     case "2":
                         List<Employee> EmployeeListLastNameSort = employeeList.OrderBy(e => e.LastName).ToList();
                         foreach (var employee in EmployeeListLastNameSort)
                         {
-                            Console.WriteLine($"{employee.Id}: {employee.LastName} {employee.FirstName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                            Console.WriteLine($"{employee.Id}\n\r {employee.LastName}\n\r {employee.FirstName}\n\r Age: {employee.Age}\n\r Department: {employee.Department}\n\r HireDate: {employee.HireDate}\n\r");
                         }
                         break;
                     case "3":
                         List<Employee> EmployeeListFirstnameSort = employeeList.OrderBy(e => e.FirstName).ToList();
                         foreach (var employee in EmployeeListFirstnameSort)
                         {
-                            Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                            Console.WriteLine($"{employee.Id}\n\r {employee.FirstName} {employee.LastName}\n\r Age: {employee.Age}\n\r Department: {employee.Department}\n\r HireDate: {employee.HireDate}\n\r");
                         }
                         break;
                     case "4":
                         List<Employee> EmployeeListDepartmentSort = employeeList.OrderBy(e => e.Department).ToList();
                         foreach (var employee in EmployeeListDepartmentSort)
                         {
-                            Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                            Console.WriteLine($"{employee.Id}\n\r {employee.FirstName} {employee.LastName}\n\r Age: {employee.Age}\n\r Department: {employee.Department}\n\r HireDate: {employee.HireDate}\n\r");
                         }
                         break;
                     case "5":
                         List<Employee> EmployeeListIdSort = employeeList.OrderBy(e => e.Id).ToList();
                         foreach (var employee in EmployeeListIdSort)
                         {
-                            Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}");
+                            Console.WriteLine($"{employee.Id}\n\r {employee.FirstName}\n\r {employee.LastName}\n\r");
                         }
                         break;
                     case "6":
@@ -203,7 +203,7 @@ namespace EFLab_3_LINQoLAMBDA
 
                         foreach (var employee in EmployeeListSearch)
                         {
-                            Console.WriteLine($"{employee.Id} {employee.FirstName} {employee.LastName}, Age: {employee.Age}, Department: {employee.Department}, HireDate: {employee.HireDate}");
+                            Console.WriteLine($"{employee.Id}\n\r {employee.FirstName} {employee.LastName}\n\r Age: {employee.Age}\n\r Department: {employee.Department}\n\r HireDate: {employee.HireDate}\n\r");
                         }
                         break;
                     case "7":
